@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:title="@string/menu_home" />
+    </group>
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item android:id="@+id/subGroup1"
+            android:title="@string/menu"
+            >
+            <menu>
+                <item
+                    android:id="@+id/nav_savories"
+                    android:title="@string/savories"
+                    android:icon="@drawable/cake_slice_icon">
+
+                </item>
+                <item
+                    android:id="@+id/nav_meals"
+                    android:title="@string/meals"
+                    android:icon="@drawable/food_dinner_icon">
+
+                </item>
+                <item
+                    android:id="@+id/nav_drinks"
+                    android:title="@string/drinks"
+                    android:icon="@drawable/hot_tea_icon">
+                </item>
+            </menu>
+        </item>
+    </group>
+
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+        <item android:id="@+id/subGroup3"
+            android:title="@string/cart"
+            >
+            <menu>
+                <item
+                    android:id="@+id/nav_cart"
+                    android:title="@string/view_cart"
+                    android:icon="@drawable/ic_cart">
+                </item>
+            </menu>
+        </item>
+    </group>
+
+    <group
+        android:id="@+id/group4"
+        android:checkableBehavior="single">
+        <item android:id="@+id/subGroup4"
+            android:title="@string/history"
+            >
+            <menu>
+                <item
+                    android:id="@+id/mnuTransactions"
+                    android:title="@string/transaction_history"
+                    android:icon="@drawable/bill_receipt_icon">
+                </item>
+            </menu>
+        </item>
+    </group>
+</menu>

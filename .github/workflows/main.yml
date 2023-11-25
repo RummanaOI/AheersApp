@@ -1,0 +1,37 @@
+name: Android Build
+on: 
+  push:
+    branches: [main, dev/checkoutOrder]
+  pull_request:
+    branches: [main, dev/checkoutOrder]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Run a one-line script
+        run: echo Hello, World!
+
+      - name: Set Up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 17
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Run Tests
+        run : ./gradlew test
+
+      - name: Run Lint
+        run: ./gradlew lintDebug
+
+      - name: Build project
+        run: ./gradlew assemble
+
+      - name: Upload html test report
+        uses: actions/upload-artifact@v2
+        with:
+          name: index.html
+          path: app/build/reports/lint-results-debug.html
+      

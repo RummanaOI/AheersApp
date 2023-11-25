@@ -1,0 +1,13 @@
+DO ADD ITEM FRAGMENT
+    implement '+' and '-' functionality with price update
+LIST OF ADDED ITEMS AND QUANTITY
+    LiveData for quantity and total price as the user adds them
+CART IMPLEMENTATION
+    with the same LiveData to update the total price
+ORDER HISTORY
+TODO: CART STUFF
+----------UI STUFF-----------
+DESIGN 'CART' SCREEN
+    with '-' and '+' buttons to increase the number
+CLEAN UP COLORS [as best as possible]
+SOME KIND OF NAV FOR MENU/LOGOUT/ORDER HISTORY [PROBABLY DO A MENU BURGER THING]

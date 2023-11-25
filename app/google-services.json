@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "910014594137",
+    "project_id": "aheersapp",
+    "storage_bucket": "aheersapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910014594137:android:64053a6d62f7b44c194548",
+        "android_client_info": {
+          "package_name": "com.project.aheersapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZgFZp8sE6wY3TrDB29MhATypFZt0CF8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

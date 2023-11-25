@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.project.aheersapp.main.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_cart"
+            app:destination="@id/nav_cart" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_savories"
+        android:name="com.project.aheersapp.ui.fragments.SavoriesFragment"
+        android:label="Savories"
+        tools:layout="@layout/fragment_savories" >
+        <action
+            android:id="@+id/action_nav_savories_to_nav_cart"
+            app:destination="@id/nav_cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_drinks"
+        android:name="com.project.aheersapp.ui.fragments.DrinksFragment"
+        android:label="Drinks"
+        tools:layout="@layout/fragment_drinks" >
+        <action
+            android:id="@+id/action_nav_drinks_to_nav_cart"
+            app:destination="@id/nav_cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_meals"
+        android:name="com.project.aheersapp.ui.fragments.MealsFragment"
+        android:label="Meals"
+        tools:layout="@layout/fragment_meals" >
+        <action
+            android:id="@+id/action_nav_meals_to_nav_cart"
+            app:destination="@id/nav_cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.project.aheersapp.ui.cart.CartFragment"
+        android:label="Meals"
+        tools:layout="@layout/fragment_meals" >
+        <action
+            android:id="@+id/action_nav_cart_to_nav_Change"
+            app:destination="@id/nav_Change" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_Change"
+        android:name="com.project.aheersapp.ui.cart.ItemChangeFragment"
+        android:label="Meals"
+        tools:layout="@layout/fragment_meals" >
+        <argument
+            android:name="argImg"
+            app:argType="integer" />
+        <argument
+            android:name="argName"
+            app:argType="string" />
+        <argument
+            android:name="argQuantity"
+            app:argType="integer" />
+        <argument
+            android:name="argPrice"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_Change_to_nav_cart"
+            app:destination="@id/nav_cart" />
+    </fragment>
+</navigation>
